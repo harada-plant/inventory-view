@@ -7,8 +7,11 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 const statusEl = document.getElementById("status");
 const tbody = document.querySelector("#items-table tbody");
+const nowtime =()=> new Date();
 
 async function loadItems() {
+  document.getElementById("update").textContent = nowtime;
+  
   statusEl.textContent = "読み込み中...";
 
   const { data, error } = await supabase
@@ -46,6 +49,7 @@ if (!data || data.length === 0) {
 
 
 loadItems();
+
 
 
 
