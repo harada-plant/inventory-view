@@ -41,7 +41,6 @@ if (!data || data.length === 0) {
         <td>${row.category1 ?? ""}</td>
         <td>${row.category2 ?? ""}</td>
         <td>${row.quantity ?? ""}</td>
-        <td>${row.updated_at ?? ""}</td>
       </tr>`
     )
     .join("");
@@ -49,6 +48,7 @@ if (!data || data.length === 0) {
 
 
 loadItems();
+
 
 
 
